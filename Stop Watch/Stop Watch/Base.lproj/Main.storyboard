@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stop_Watch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGF-bd-POn">
+                                <rect key="frame" x="159" y="119" width="56" height="119.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="119.5" id="cLO-Z0-kTV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EU-Hu-QPN">
+                                <rect key="frame" x="122" y="402" width="130" height="33"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="PAUSE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K7E-x7-x8V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSK-nn-dbi">
+                                <rect key="frame" x="122" y="443" width="130" height="33"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="RESET">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lN8-ug-qnW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfS-IH-MnM">
+                                <rect key="frame" x="122" y="361" width="130" height="33"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tc6-Kg-5AE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PfS-IH-MnM" secondAttribute="trailing" constant="123" id="0Vo-dl-CKX"/>
+                            <constraint firstItem="ZGF-bd-POn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="99" id="0ic-hS-FcF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uSK-nn-dbi" secondAttribute="trailing" constant="123" id="34T-Vd-bzP"/>
+                            <constraint firstItem="1EU-Hu-QPN" firstAttribute="top" secondItem="PfS-IH-MnM" secondAttribute="bottom" constant="8" id="7kA-ef-oVh"/>
+                            <constraint firstItem="1EU-Hu-QPN" firstAttribute="top" secondItem="PfS-IH-MnM" secondAttribute="bottom" constant="8" id="Cvx-Sj-12h"/>
+                            <constraint firstItem="uSK-nn-dbi" firstAttribute="top" secondItem="1EU-Hu-QPN" secondAttribute="bottom" constant="8" id="Q0Y-2c-95T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1EU-Hu-QPN" secondAttribute="trailing" constant="123" id="QJV-NA-c6z"/>
+                            <constraint firstItem="PfS-IH-MnM" firstAttribute="top" secondItem="ZGF-bd-POn" secondAttribute="bottom" constant="122.5" id="Yth-0F-PFb"/>
+                            <constraint firstItem="1EU-Hu-QPN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="dUp-6z-vQ3"/>
+                            <constraint firstItem="PfS-IH-MnM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="etJ-kN-Oeh"/>
+                            <constraint firstItem="uSK-nn-dbi" firstAttribute="top" secondItem="1EU-Hu-QPN" secondAttribute="bottom" constant="8" id="k3F-GV-VC6"/>
+                            <constraint firstItem="ZGF-bd-POn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nE5-1s-kcS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uSK-nn-dbi" secondAttribute="bottom" constant="191" id="oR1-Tn-0Vg"/>
+                            <constraint firstItem="uSK-nn-dbi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="yAR-cj-VhS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="Lable" destination="ZGF-bd-POn" id="tWt-hT-SLs"/>
+                        <outlet property="label" destination="ZGF-bd-POn" id="oP1-s4-oWv"/>
+                        <outlet property="lable" destination="ZGF-bd-POn" id="4tx-KA-hZk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+</document>
